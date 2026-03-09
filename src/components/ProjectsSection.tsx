@@ -20,11 +20,11 @@ const projects = [
     tags: ["PHP", "JavaScript", "PostgreSQL"],
   },
   {
-    title: "Student Enrollment System",
+    title: "Gate Pass Monitoring System",
     description:
-      "An enrollment and records management system with student registration, grade tracking, and administrative tools.",
+      "A smart security system using facial recognition to automate gate pass verification. Features real-time face detection, visitor logging, access control, and comprehensive analytics dashboard.",
     image: project3,
-    tags: ["Laravel", "Vue.js", "MySQL"],
+    tags: ["Laravel", "Vue.js", "MySQL", "OpenCV"],
   },
 ];
 
