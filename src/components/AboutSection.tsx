@@ -88,6 +88,41 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Certificates */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-20"
+        >
+          <h3 className="text-sm font-mono text-primary mb-8 tracking-widest uppercase">
+            Certificates & Achievements
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {certificates.map((cert) => (
+              <motion.div
+                key={cert.title}
+                whileHover={{ y: -4 }}
+                className="group rounded-xl border border-border bg-secondary/30 overflow-hidden backdrop-blur-sm hover:border-primary/40 transition-all duration-300"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h4 className="font-semibold text-foreground mb-1">{cert.title}</h4>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  <p className="text-xs text-muted-foreground/70 mt-1">{cert.date}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
