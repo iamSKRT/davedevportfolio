@@ -118,7 +118,7 @@ const HeroSection = () => {
             <div className="glass rounded-2xl p-6 glow">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(45, 80%, 50%, 0.6)" }} />
                 <div className="w-3 h-3 rounded-full bg-primary/60" />
                 <span className="ml-3 text-xs text-muted-foreground font-mono">about.ts</span>
               </div>
