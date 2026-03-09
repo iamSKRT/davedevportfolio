@@ -1,7 +1,24 @@
 import { motion } from "framer-motion";
+import customerSupportCert from "@/assets/customer_support.png";
+import aiLiteracyCert from "@/assets/ai_literacy.png";
 
 const skills = [
   "HTML", "CSS", "JavaScript", "PHP", "Vue.js", "Laravel", "MySQL", "PostgreSQL",
+];
+
+const certificates = [
+  {
+    title: "IT Customer Support Basics",
+    issuer: "Cisco Networking Academy",
+    date: "February 2026",
+    image: customerSupportCert,
+  },
+  {
+    title: "AI For Industry® — Literacy in AI",
+    issuer: "AI Singapore",
+    date: "February 2026",
+    image: aiLiteracyCert,
+  },
 ];
 
 const container = {
