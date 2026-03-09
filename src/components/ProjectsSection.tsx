@@ -6,9 +6,9 @@ import project3 from "@/assets/project3.jpg";
 
 const projects = [
   {
-    title: "Inventory Management System",
+    title: "Coffee Shop Web-Based System",
     description:
-      "A full-featured inventory tracking dashboard with real-time analytics, stock management, and reporting. Built with Laravel, Vue.js, and MySQL.",
+      "A complete coffee shop management platform featuring a point-of-sale interface, menu management, real-time order tracking, sales analytics dashboard, and inventory monitoring for ingredients and supplies.",
     image: project1,
     tags: ["Laravel", "Vue.js", "MySQL"],
   },
