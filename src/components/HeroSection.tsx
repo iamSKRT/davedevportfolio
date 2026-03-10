@@ -86,23 +86,22 @@ const HeroSection = () => {
               transition={{ delay: 0.7 }}
               className="flex items-center justify-center"
             >
-              <div className="glass rounded-xl p-4 glow">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-destructive/60" />
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(45, 80%, 50%, 0.6)" }} />
-                  <div className="w-2.5 h-2.5 rounded-full bg-primary/60" />
-                  <span className="ml-2 text-[10px] text-muted-foreground font-mono">about.ts</span>
+              <div className="glass rounded-2xl p-6 glow">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-destructive/60" />
+                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(45, 80%, 50%, 0.6)" }} />
+                  <div className="w-3 h-3 rounded-full bg-primary/60" />
+                  <span className="ml-3 text-xs text-muted-foreground font-mono">about.ts</span>
                 </div>
-                <pre className="text-xs font-mono leading-relaxed">
+                <pre className="text-sm font-mono leading-relaxed">
                   <code>
                     <span className="text-primary/70">const</span>{" "}
                     <span className="text-foreground">developer</span>{" "}
                     <span className="text-primary/70">=</span> {"{\n"}
                     {"  "}name: <span className="text-primary">"Christian Dave"</span>,{"\n"}
                     {"  "}role: <span className="text-primary">"Software Dev Intern"</span>,{"\n"}
-                    {"  "}skills: [<span className="text-primary">"Vue.js"</span>,{"\n"}
-                    {"    "}<span className="text-primary">"Laravel"</span>, <span className="text-primary">"MySQL"</span>,{"\n"}
-                    {"    "}<span className="text-primary">"JavaScript"</span>],{"\n"}
+                    {"  "}skills: [<span className="text-primary">"Vue.js"</span>, <span className="text-primary">"Laravel"</span>,{"\n"}
+                    {"          "}<span className="text-primary">"MySQL"</span>, <span className="text-primary">"JavaScript"</span>],{"\n"}
                     {"  "}passion: <span className="text-primary">"Building things"</span>,{"\n"}
                     {"  "}available: <span className="text-primary">true</span>{"\n"}
                     {"}"};
