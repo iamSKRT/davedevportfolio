@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Instagram, ArrowDown, Terminal, Code2, Sparkles } from "lucide-react";
+import { Github, Instagram, ArrowDown } from "lucide-react";
+
 
 const HeroSection = () => {
   return (
