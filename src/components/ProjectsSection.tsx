@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/ecommerce.jpg";
 import project3 from "@/assets/monitoring_system.png";
