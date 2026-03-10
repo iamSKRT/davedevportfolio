@@ -10,21 +10,21 @@ const projects = [
     description:
       "A complete coffee shop management platform featuring a point-of-sale interface, menu management, real-time order tracking, sales analytics dashboard, and inventory monitoring for ingredients and supplies.",
     image: project1,
-    tags: ["Laravel", "Vue.js", "MySQL"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   },
   {
-    title: "E-Commerce Platform",
+    title: "E-Commerce Platform with Inventory Management System using Barcode Scanner",
     description:
-      "A modern online store with product catalog, cart system, and payment integration. Features responsive design and admin panel.",
+      "A modern online store with product catalog, cart system, and payment integration. Features responsive design, admin panel, and barcode-based inventory management.",
     image: project2,
-    tags: ["PHP", "JavaScript", "PostgreSQL"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "SCSS"],
   },
   {
     title: "Gate Pass Monitoring System",
     description:
       "A smart security system using facial recognition to automate gate pass verification. Features real-time face detection, visitor logging, access control, and comprehensive analytics dashboard.",
     image: project3,
-    tags: ["Laravel", "Vue.js", "MySQL", "OpenCV"],
+    tags: ["Python", "PostgreSQL"],
   },
 ];
 
