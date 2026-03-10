@@ -73,17 +73,17 @@ const HeroSection = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300 border border-border"
+                className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-white hover:border-white/30 transition-all duration-300 border border-border"
               >
-                <Github size={18} color="#ffffff" />
+                <Github size={18} />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300 border border-border"
+                className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-[#E4405F] hover:border-[#E4405F]/30 transition-all duration-300 border border-border"
               >
-                <Instagram size={18} color="#E4405F" />
+                <Instagram size={18} />
               </a>
             </motion.div>
           </div>
