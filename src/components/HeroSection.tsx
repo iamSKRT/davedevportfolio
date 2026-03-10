@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Instagram, ArrowDown } from "lucide-react";
-
+import { Github, Instagram, Linkedin, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -9,10 +8,14 @@ const HeroSection = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Background grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
 
       {/* Gradient orbs */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
@@ -20,6 +23,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto lg:max-w-none">
+
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -27,14 +31,13 @@ const HeroSection = () => {
             transition={{ delay: 0.4 }}
             className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] mb-8"
           >
-            Hi, I am{" "}
-            <br />
+            Hi, I am <br />
             <span className="text-gradient">Christian Dave</span>
           </motion.h1>
 
-          {/* Two-column: code card right, bio left */}
           <div className="grid md:grid-cols-2 gap-8 items-start mb-8">
-            {/* Left - bio + buttons */}
+
+            {/* Left Side */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -44,8 +47,11 @@ const HeroSection = () => {
               <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
                 Software Developer Intern
               </p>
+
               <p className="text-muted-foreground/70 mb-10 leading-relaxed text-sm">
-                Hello! I'm a Software Developer Intern and a graduating student with a strong passion for technology and continuous learning. I enjoy building web-based systems and software applications that solve real-world problems. Through my experience and projects, I have developed skills in web development, problem-solving, and system design. I am always eager to explore new technologies and improve my development skills to create efficient and user-friendly solutions.
+                Hello! I'm a Software Developer Intern and graduating student passionate
+                about learning new technologies. I enjoy building web-based systems and
+                software applications that solve real-world problems.
               </p>
 
               <div className="flex items-center gap-4 flex-wrap">
@@ -55,32 +61,47 @@ const HeroSection = () => {
                 >
                   Get In Touch
                 </a>
+
                 <a
                   href="#projects"
                   className="px-8 py-3.5 rounded-xl bg-secondary border border-border text-secondary-foreground font-semibold text-sm hover:border-primary/30 transition-all"
                 >
                   View Projects
                 </a>
+
+                {/* Github */}
                 <a
-                  href="https://github.com"
+                  href="https://github.com/iamSKRT"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-white hover:border-white/30 transition-all duration-300 border border-border"
+                  className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 border border-border"
                 >
                   <Github size={18} />
                 </a>
+
+                {/* LinkedIn */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.linkedin.com/in/christian-dave-alvarez-0750933a8/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-[#E4405F] hover:border-[#E4405F]/30 transition-all duration-300 border border-border"
+                  className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-[#0A66C2] transition-all duration-300 border border-border"
+                >
+                  <Linkedin size={18} />
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/iam_chrstndv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-[#E4405F] transition-all duration-300 border border-border"
                 >
                   <Instagram size={18} />
                 </a>
               </div>
             </motion.div>
 
-            {/* Right - code card */}
+            {/* Code Card */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -89,24 +110,22 @@ const HeroSection = () => {
             >
               <div className="glass rounded-2xl p-8 glow">
                 <div className="flex items-center gap-2 mb-5">
-                  <div className="w-3.5 h-3.5 rounded-full bg-destructive/60" />
-                  <div className="w-3.5 h-3.5 rounded-full" style={{ backgroundColor: "hsl(45, 80%, 50%, 0.6)" }} />
-                  <div className="w-3.5 h-3.5 rounded-full bg-primary/60" />
-                  <span className="ml-3 text-sm text-muted-foreground font-mono">about.ts</span>
+                  <div className="w-3.5 h-3.5 rounded-full bg-red-400" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-yellow-400" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-green-400" />
+                  <span className="ml-3 text-sm text-muted-foreground font-mono">
+                    about.ts
+                  </span>
                 </div>
+
                 <pre className="text-base md:text-lg font-mono leading-relaxed">
-                  <code>
-                    <span className="text-primary/70">const</span>{" "}
-                    <span className="text-foreground">developer</span>{" "}
-                    <span className="text-primary/70">=</span> {"{\n"}
-                    {"  "}name: <span className="text-primary">"Christian Dave"</span>,{"\n"}
-                    {"  "}role: <span className="text-primary">"Software Dev Intern"</span>,{"\n"}
-                    {"  "}skills: [<span className="text-primary">"Vue.js"</span>, <span className="text-primary">"Laravel"</span>,{"\n"}
-                    {"          "}<span className="text-primary">"MySQL"</span>, <span className="text-primary">"JavaScript"</span>],{"\n"}
-                    {"  "}passion: <span className="text-primary">"Building things"</span>,{"\n"}
-                    {"  "}available: <span className="text-primary">true</span>{"\n"}
-                    {"}"};
-                  </code>
+{`const developer = {
+  name: "Christian Dave",
+  role: "Software Dev Intern",
+  skills: ["Vue.js", "Laravel", "MySQL", "JavaScript"],
+  passion: "Building things",
+  available: true
+};`}
                 </pre>
               </div>
             </motion.div>
@@ -114,7 +133,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <motion.a
         href="#about"
         animate={{ y: [0, 10, 0] }}
