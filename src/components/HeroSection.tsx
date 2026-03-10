@@ -57,10 +57,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="text-muted-foreground/70 mb-10 max-w-lg leading-relaxed"
+              className="text-muted-foreground/70 mb-10 max-w-lg leading-relaxed text-sm"
             >
-              Building clean, scalable web applications with modern technologies.
-              Passionate about turning ideas into elegant digital experiences.
+              Hello! I'm a Software Developer Intern and a graduating student with a strong passion for technology and continuous learning. I enjoy building web-based systems and software applications that solve real-world problems. Through my experience and projects, I have developed skills in web development, problem-solving, and system design. I am always eager to explore new technologies and improve my development skills to create efficient and user-friendly solutions.
             </motion.p>
 
             <motion.div
