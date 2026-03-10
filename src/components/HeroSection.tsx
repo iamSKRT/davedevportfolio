@@ -93,7 +93,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="hidden lg:block"
+            className="hidden md:block"
           >
             <div className="glass rounded-2xl p-6 glow">
               <div className="flex items-center gap-2 mb-4">
