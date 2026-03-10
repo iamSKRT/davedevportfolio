@@ -10,21 +10,21 @@ const projects = [
     description:
       "A complete coffee shop management platform featuring a point-of-sale interface, menu management, real-time order tracking, sales analytics dashboard, and inventory monitoring for ingredients and supplies.",
     image: project1,
-    tags: ["Laravel", "Vue.js", "MySQL"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   },
   {
-    title: "E-Commerce Platform",
+    title: "E-Commerce Platform with Inventory Management System using Barcode Scanner",
     description:
-      "A modern online store with product catalog, cart system, and payment integration. Features responsive design and admin panel.",
+      "A modern online store with product catalog, cart system, and payment integration. Features responsive design, admin panel, and barcode-based inventory management.",
     image: project2,
-    tags: ["PHP", "JavaScript", "PostgreSQL"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "SCSS"],
   },
   {
     title: "Gate Pass Monitoring System",
     description:
       "A smart security system using facial recognition to automate gate pass verification. Features real-time face detection, visitor logging, access control, and comprehensive analytics dashboard.",
     image: project3,
-    tags: ["Laravel", "Vue.js", "MySQL", "OpenCV"],
+    tags: ["Python", "PostgreSQL"],
   },
 ];
 
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-mono text-sm mb-2 tracking-widest">02.</p>
+          <p className="text-primary font-mono text-sm mb-2 tracking-widest">01.</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-16">
             My <span className="text-gradient">Projects</span>
           </h2>
