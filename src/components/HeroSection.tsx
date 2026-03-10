@@ -69,14 +69,6 @@ const HeroSection = () => {
               >
                 View Projects
               </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.1 }}
-              className="flex items-center gap-4 mt-10"
-            >
               <a
                 href="https://github.com"
                 target="_blank"
