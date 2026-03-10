@@ -84,6 +84,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7 }}
+              className="flex items-center justify-center"
             >
               <div className="glass rounded-xl p-4 glow">
                 <div className="flex items-center gap-2 mb-3">
