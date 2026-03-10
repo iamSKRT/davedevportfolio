@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
 import { toast } from "sonner";
 
 const PhilippinesMap = () => (
@@ -170,9 +169,9 @@ const ContactSection = () => {
 
             <button
               type="submit"
-              className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity glow"
+              className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity glow"
             >
-              Send Message <Send size={16} />
+              Send Message
             </button>
           </motion.form>
 
