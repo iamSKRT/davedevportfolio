@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Coffee Shop Web-Based System",
     description:
-      "A complete coffee shop management platform featuring a point-of-sale interface, menu management, real-time order tracking, sales analytics dashboard, and inventory monitoring for ingredients and supplies.",
+      "A complete coffee shop management platform featuring a Online Payment interface, menu management, real-time order tracking,and sales analytics dashboard.",
     image: project1,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   },
@@ -16,12 +16,12 @@ const projects = [
     description:
       "A modern online store with product catalog, cart system, and payment integration. Features responsive design, admin panel, and barcode-based inventory management.",
     image: project2,
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "SCSS"],
+    tags: ["HTML", "CSS", "JavaScript", "SCSS", "PHP", "MYSQL"],
   },
   {
-    title: "Gate Pass Monitoring System",
+    title: "Gate Pass Monitoring System Using Facial Recognition",
     description:
-      "A smart security system using facial recognition to automate gate pass verification. Features real-time face detection, visitor logging, access control, and comprehensive analytics dashboard.",
+      "A smart security system using facial recognition to automate gate pass verification. Features real-time Face detection, SMS notifications, Visitor logging, Access control, and comprehensive analytics dashboard.",
     image: project3,
     tags: ["Python", "PostgreSQL"],
   },
@@ -31,6 +31,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,6 +72,7 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground leading-relaxed mb-5">
                   {project.description}
                 </p>
+
                 <div className={`flex flex-wrap gap-2 ${index % 2 === 1 ? "md:justify-end" : ""}`}>
                   {project.tags.map((tag) => (
                     <span
@@ -85,6 +87,23 @@ const ProjectsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* VIEW MORE PROJECTS BUTTON */}
+        <motion.div
+          className="flex justify-center mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <a
+            href="/projects"
+            className="px-8 py-3 rounded-lg border border-primary text-primary font-mono text-sm tracking-wide hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            View More Projects →
+          </a>
+        </motion.div>
+
       </div>
     </section>
   );

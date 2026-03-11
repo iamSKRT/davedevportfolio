@@ -14,30 +14,30 @@ const Footer = () => (
 
         {/* GitHub */}
         <a
-          href="https://github.com/YOUR_GITHUB"
+          href="https://github.com/iamSKRT"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-muted-foreground hover:text-[#c8ced8] transition-colors"
         >
           <Github size={18} />
         </a>
 
-        {/* LinkedIn */}
-        <a
+          {/* LinkedIn */}
+           <a
           href="https://www.linkedin.com/in/christian-dave-alvarez-0750933a8/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-[#0A66C2] transition-all duration-300 border border-border"
+          className="text-muted-foreground hover:text-[#0A66C2] transition-colors"
         >
           <Linkedin size={18} />
         </a>
 
         {/* Instagram */}
         <a
-          href="https://instagram.com/YOUR_INSTAGRAM"
+          href="https://www.instagram.com/iam_chrstndv/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary transition-colors"
+          className="text-muted-foreground hover:text-[#E1306C] transition-colors"
         >
           <Instagram size={18} />
         </a>

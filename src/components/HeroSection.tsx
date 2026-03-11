@@ -1,5 +1,29 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Github, Instagram, Linkedin, ArrowDown } from "lucide-react";
+
+const roleText = "Software Developer Intern";
+
+// Properly typed variants
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const letter: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
 
 const HeroSection = () => {
   return (
@@ -44,11 +68,23 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col justify-center"
             >
-              <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
-                Software Developer Intern
-              </p>
+              {/* Animated Role */}
+              <motion.p
+                variants={container}
+                initial="hidden"
+                animate="show"
+                className="text-xl md:text-2xl mb-4 font-light
+                  bg-gradient-to-r from-green-300 via-gray-400 to-green-600
+                  bg-clip-text text-transparent"
+              >
+                {roleText.split("").map((char, index) => (
+                  <motion.span key={index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.p>
 
-              <p className="text-muted-foreground/70 mb-10 leading-relaxed text-sm">
+              <p className="text-muted-foreground/100 mb-10 leading-relaxed text-sm">
                 Hello! I'm a Software Developer Intern and graduating student passionate
                 about learning new technologies. I enjoy building web-based systems and
                 software applications that solve real-world problems.
@@ -69,7 +105,6 @@ const HeroSection = () => {
                   View Projects
                 </a>
 
-                {/* Github */}
                 <a
                   href="https://github.com/iamSKRT"
                   target="_blank"
@@ -79,7 +114,6 @@ const HeroSection = () => {
                   <Github size={18} />
                 </a>
 
-                {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/christian-dave-alvarez-0750933a8/"
                   target="_blank"
@@ -89,7 +123,6 @@ const HeroSection = () => {
                   <Linkedin size={18} />
                 </a>
 
-                {/* Instagram */}
                 <a
                   href="https://www.instagram.com/iam_chrstndv/"
                   target="_blank"
@@ -122,7 +155,7 @@ const HeroSection = () => {
 {`const developer = {
   name: "Christian Dave",
   role: "Software Dev Intern",
-  skills: ["Vue.js", "Laravel", "MySQL", "JavaScript"],
+  skills: ["Vue.js", "JavaScript", "Laravel", "MySQL"],
   passion: "Building things",
   available: true
 };`}

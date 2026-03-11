@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const PhilippinesMap = () => (
   <svg viewBox="0 0 600 500" className="w-full h-full" fill="none">
@@ -82,12 +83,43 @@ const PhilippinesMap = () => (
 );
 
 const ContactSection = () => {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setForm({ name: "", email: "", subject: "", message: "" });
+    setLoading(true);
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      subject: form.subject,
+      message: form.message,
+    };
+
+    try {
+       const result = await emailjs.send(
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+      );
+
+      console.log("EmailJS Success:", result.text);
+      toast.success("Message sent! I'll get back to you soon.");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -110,7 +142,6 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto items-start">
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: -40 }}
@@ -119,11 +150,12 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-5"
           >
+            {/* Name */}
             <div>
               <label className="text-xs text-muted-foreground mb-1 block">Name</label>
               <input
                 type="text"
-                placeholder="Maya"
+                placeholder="John Doe"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
@@ -131,11 +163,12 @@ const ContactSection = () => {
               />
             </div>
 
+            {/* Email */}
             <div>
               <label className="text-xs text-muted-foreground mb-1 block">Email</label>
               <input
                 type="email"
-                placeholder="your@email.com"
+                placeholder="your@gmail.com"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
@@ -143,6 +176,7 @@ const ContactSection = () => {
               />
             </div>
 
+            {/* Subject */}
             <div>
               <label className="text-xs text-muted-foreground mb-1 block">Subject</label>
               <input
@@ -155,6 +189,7 @@ const ContactSection = () => {
               />
             </div>
 
+            {/* Message */}
             <div>
               <label className="text-xs text-muted-foreground mb-1 block">Message</label>
               <textarea
@@ -169,11 +204,13 @@ const ContactSection = () => {
 
             <button
               type="submit"
+              disabled={loading}
               className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity glow"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </motion.form>
+
 
           {/* Map */}
           <motion.div
