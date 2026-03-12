@@ -85,9 +85,10 @@ const HeroSection = () => {
               </motion.p>
 
               <p className="text-muted-foreground/100 mb-10 leading-relaxed text-sm">
-                Hello! I'm a Software Developer Intern and graduating student passionate
-                about learning new technologies. I enjoy building web-based systems and
-                software applications that solve real-world problems.
+                Hello! I am a Software Developer Intern and a graduating student with a strong passion for emerging technologies.
+                 I specialize in creating web-based systems and software applications that deliver practical solutions 
+                 to real-world challenges, combining creativity with efficient, user-focused design. Behind every error solved, 
+                 there’s a cup of coffee.
               </p>
 
               <div className="flex items-center gap-4 flex-wrap">
