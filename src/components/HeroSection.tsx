@@ -152,14 +152,15 @@ const HeroSection = () => {
                 </div>
 
                 <pre className="text-xs sm:text-base md:text-lg font-mono leading-relaxed">
-{`const developer = {
-  name: "Christian Dave",
-  role: "Software Dev Intern",
-  skills: ["Vue.js", "JavaScript", "Laravel", "MySQL"],
-  passion: "Building things",
-  available: true
-};`}
+                {`const developer = {
+                  name: "Christian Dave",
+                  role: "Software Dev Intern",
+                  skills: ["Vue.js", "JavaScript", "Laravel", "MySQL"],
+                  passion: "Building things",
+                  available: true
+                  };`}
                 </pre>
+                
               </div>
             </motion.div>
           </div>

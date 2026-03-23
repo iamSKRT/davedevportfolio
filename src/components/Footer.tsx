@@ -6,8 +6,9 @@ const Footer = () => (
 
       {/* Copyright */}
       <p className="text-sm text-muted-foreground">
-        © 2026 Christian Dave. All rights reserved.
+        Copyright © 2026 Christian Dave. All rights reserved, view the source code on <a href="https://github.com/iamSKRT" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">GitHub</a>.
       </p>
+     
 
       {/* Social Icons */}
       <div className="flex items-center gap-4">
