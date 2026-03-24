@@ -120,6 +120,66 @@ const AboutSection = () => {
     },
   ];
 
+  const InfoCard = () => (
+  <motion.div
+    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+    whileHover={{ y: -6, scale: 1.02 }}
+    className="mb-6 p-6 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.3)]"
+  >
+    <h3 className="text-sm font-mono text-primary tracking-widest uppercase mb-5">
+      Education & Experience
+    </h3>
+
+    <div className="space-y-6 text-sm text-muted-foreground">
+
+      {/* EDUCATION */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <h4 className="text-foreground font-semibold flex items-center gap-2">
+          🎓 Education
+        </h4>
+        <p>Our Lady of Fatima University (Antipolo Campus)</p>
+        <p className="text-xs">Bachelor of Science in Information Technology</p>
+        <p className="text-xs text-gray-400">2022 – 2026</p>
+      </motion.div>
+
+      {/* EXPERIENCE */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <h4 className="text-foreground font-semibold flex items-center gap-2">
+          💼 Experience
+        </h4>
+        <p>Software Developer Intern</p>
+        <p className="text-xs text-gray-400">3–4 Months (Internship & Projects)</p>
+      </motion.div>
+
+      {/* YEARS */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <h4 className="text-foreground font-semibold flex items-center gap-2">
+          ⏳ Duration
+        </h4>
+        <p className="text-xs">Gaining hands-on experience in real-world development</p>
+      </motion.div>
+
+    </div>
+  </motion.div>
+);
+
+
+
   return (
     <section id="about" className="py-12 sm:py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
@@ -158,7 +218,7 @@ const AboutSection = () => {
             <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
                 I am Currently a <span className="font-semibold text-foreground">Software Developer Intern</span> dedicated to building clean, efficient, and user-friendly web applications.
-                I am a graduating student pursuing a degree in <span className="font-semibold text-foreground">Bachelor of Science in Information Technology</span> at <span className="font-semibold text-foreground">Our Lady of Fatima University (Antipolo Campus)</span>, where I continuously expand my knowledge and technical skills.
+                a degree in <span className="font-semibold text-foreground">Bachelor of Science in Information Technology</span> at <span className="font-semibold text-foreground">Our Lady of Fatima University (Antipolo Campus)</span>, where I continuously expand my knowledge and technical skills.
               </p>
               <p>
                 Passionate about learning new programming languages and exploring emerging technologies, I enjoy creating modern web experiences and applying innovative solutions to real-world problems. My goal is to develop meaningful software while growing as a versatile and creative developer.
@@ -195,6 +255,8 @@ const AboutSection = () => {
           {/* TIMELINE */}
           <motion.div className="md:col-span-1 relative flex flex-col gap-6">
             <h3 className="text-sm font-mono text-primary tracking-widest uppercase mb-4">Work Experience</h3>
+            {/* ✅ ADD THIS LINE */}
+            <InfoCard />
             <Timeline>
               {timelineData.map((item, idx) => (
                 <TimelineItem key={idx} {...item} />
