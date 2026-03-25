@@ -19,8 +19,8 @@ const projects = [
       "A modern online store with product catalog, cart system, and payment integration.",
     image: project2,
     tags: ["HTML", "CSS", "JavaScript", "SCSS", "PHP", "MYSQL"],
-    github: "https://github.com/yourusername/ecommerce",
-    demo: "https://vievieboutique.shop",
+    github: "https://github.com/iamSKRT/Boutique_Shop",
+    demo: "boutique-ant.vercel.app",
   },
   {
     title: "Gate Pass Monitoring System Using Facial Recognition",
