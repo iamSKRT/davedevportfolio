@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/ecommerce.jpg";
 import project3 from "@/assets/monitoring_system.png";
+import project4 from "@/assets/ojtmanagementsystem.png";
 
 const projects = [
   {
@@ -20,7 +21,7 @@ const projects = [
     image: project2,
     tags: ["HTML", "CSS", "JavaScript", "SCSS", "PHP", "MYSQL"],
     github: "https://github.com/iamSKRT/Boutique_Shop",
-    demo: "boutique-ant.vercel.app",
+    demo: "vievieboutique.shop",
   },
   {
     title: "Gate Pass Monitoring System Using Facial Recognition",
@@ -30,6 +31,14 @@ const projects = [
     tags: ["Python", "PostgreSQL"],
     github: "",
     demo: "",
+  },
+  {
+    title: "OJT Magement System",
+    description: "The OJT Management System is a digital platform designed to efficiently track student training  activities, tasks, and working hours. It allows students to log their daily accomplishments and instantly export them into a ready-to-print PDF report.  The system automatically calculates weekly totals, overall completed hours, and remaining required hours, ensuring accurate and hassle-free monitoring. It also features an admin dashboard where supervisors can assign required hours, monitor student progress, and review submitted tasks. This system simplifies OJT management by reducing manual work, improving accuracy, and providing a more organized and reliable training experience.",
+    image: project4, 
+    tags: ["TypeScript", "Vue.js", "Supabase"],
+    github: "",
+    demo: "https://ojtmanagementsystem-one.vercel.app/",
   },
 ];
 
