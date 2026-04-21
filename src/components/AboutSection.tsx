@@ -159,7 +159,7 @@ const AboutSection = () => {
           💼 Experience
         </h4>
         <p>Software Developer Intern</p>
-        <p className="text-xs text-gray-400">3–4 Months (Internship & Projects)</p>
+        <p className="text-xs text-gray-400">3 Months (Internship & Projects)</p>
       </motion.div>
 
       {/* YEARS */}
