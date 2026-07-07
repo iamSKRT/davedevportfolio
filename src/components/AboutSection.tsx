@@ -214,7 +214,7 @@ const AboutSection = () => {
           <motion.div className="flex flex-col space-y-6 md:col-span-1">
             <div className="space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
               <p>
-                I am Currently a <span className="font-semibold text-foreground">Software Developer Intern</span> dedicated to building clean, efficient, and user-friendly web applications.
+                I am Currently a <span className="font-semibold text-foreground">UI/UX Developer</span> dedicated to building clean, efficient, and user-friendly web applications.
                 a degree in <span className="font-semibold text-foreground">Bachelor of Science in Information Technology</span> at <span className="font-semibold text-foreground">Our Lady of Fatima University (Antipolo Campus)</span>, where I continuously expand my knowledge and technical skills.
               </p>
               <p>
