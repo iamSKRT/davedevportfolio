@@ -43,7 +43,7 @@ const projects = [
       "A smart security system using facial recognition to automate gate pass verification.",
     images: [project3],
     tags: ["Python", "PostgreSQL"],
-    github: "",
+    github: "https://github.com/iamSKRT/capstone-project/tree/main/capstone",
     demo: "",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     // 👉 MULTIPLE IMAGES HERE
     images: [project4, ojt2, ojt3, ojt4],
     tags: ["TypeScript", "Vue.js", "Supabase"],
-    github: "",
+    github: "https://github.com/iamSKRT/OJT-MANAGEMENT-SYSTEM",
     demo: "https://ojtmanagementsystem-one.vercel.app/",
   },
   {
